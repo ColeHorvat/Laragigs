@@ -18,7 +18,14 @@ use App\Http\Controllers\ListingController;
 
 Route::get('/', [ListingController::class, 'index']);
 
+// Show Create Form
+Route::get('/listings/create', [ListingController::class, 'create']);
+
+//Show single listing
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
+
+// Store listing data
+Route::post('/listings', [ListingController::class, 'store']);
 
 /*
 Common Resource Routes:
